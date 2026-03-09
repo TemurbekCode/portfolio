@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.aboutContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    background: url(about2.png);
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+/* Left Side */
+.leftAbout {
+    width: 50%;
+}
+
+.h1-about {
+    color: skyblue;
+    font-size: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 150px;
+}
+
+.about-h2 {
+    width: 100%;
+    text-align: center;
+    color: #9f9f9fce;
+    font-size: 1.8rem;
+    padding: 0 300px;
+}
+
