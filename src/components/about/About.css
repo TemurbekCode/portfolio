@@ -12,7 +12,7 @@
     background-color: black;
     background: url(about2.png);
     object-fit: cover;
-    filter: brightness(60%);
+    filter: brightness(90%);
 }
 
 /* Left Side */
@@ -31,8 +31,95 @@
 .about-h2 {
     width: 100%;
     text-align: center;
-    color: #9f9f9fce;
+    color: #f3f3f3ce;
     font-size: 1.8rem;
     padding: 0 300px;
 }
 
+.card-about1 {
+    display: flex;
+    flex-direction: column;
+    color: #f3f3f3;
+    width: 80%;
+    height: 250px;
+    margin: 50px 50px;
+    border: solid 1px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.card-about {
+    display: flex;
+    flex-direction: column;
+    color: #f3f3f3;
+    width: 80%;
+    height: 150px;
+    margin: 50px 50px;
+    border: solid 1px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.b-cardAbout {
+    font-size: 2rem;
+    margin: 5px 30px;
+    background: #800080;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.p-cardAbout {
+    font-size: 1.2rem;
+    padding: 10px 30px
+}
+
+.p-scndAbout {
+    font-size: 1.2rem;
+    padding: 10px 0px
+}
+
+.front,
+.tool {
+    display: flex;
+    margin: 10px 20px;
+    border-radius: 10px;
+    width: 365px;
+    height: 40px;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.front:hover,
+.tool:hover {
+    background: #0000006f;
+    transform: scale(1.1);
+}
+
+.icons-about {
+    margin: -5px 10px;
+    font-size: 1.2rem;
+}
+
+/* Right */
+.rightAbout {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.logoAbout {
+    width: 42%;
+    position: absolute;
+    top: 100px;
+    right: 170px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 15px #0000ff95, -7px -7px 15px #0000ff95;
+}

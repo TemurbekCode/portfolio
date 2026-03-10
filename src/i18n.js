@@ -15,8 +15,8 @@ i18n
         translation: {
           home: "Home",
           about: "About",
-          contact: "Contact",
-          achievements: "Projects",
+          services: "Services",
+          projects: "Projects",
           skill: "Skills",
 
         }
@@ -25,7 +25,7 @@ i18n
         translation: {
           home: "Bosh sahifa",
           about: "Men haqimda",
-          contact: "Bog'lanish"
+          services: "Bog'lanish"
         }
       }
     }

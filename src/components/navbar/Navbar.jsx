@@ -22,17 +22,17 @@ function Navbar() {
                     <Link to="/" className="nav-link" onClick={closeAll}>
                         {t("home")}
                     </Link>
-                    <Link to="/" className="nav-link" onClick={closeAll}>
+                    <Link to="/about" className="nav-link" onClick={closeAll}>
                         {t("about")}
                     </Link>
                     <Link to="/" className="nav-link" onClick={closeAll}>
-                        {t("achievements")}
+                        {t("projects")}
                     </Link>
                     <Link to="/" className="nav-link" onClick={closeAll}>
                         {t("skill")}
                     </Link>
                     <Link to="/" className="nav-link" onClick={closeAll}>
-                        {t("contact")}
+                        {t("services")}
                     </Link>
                 </div>
 
