@@ -10,7 +10,7 @@
     position: relative;
     overflow: hidden;
     background-color: black;
-    background: url(about2.png);
+    background: url(/about2.png);
     object-fit: cover;
     filter: brightness(90%);
 }

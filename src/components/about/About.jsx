@@ -31,7 +31,7 @@ function About() {
 
             <div className="rightAbout">
                 <div className="logoAbout">
-                    <img src="logo.png" className="logoAbout" />
+                    <img src="comp-me.png" className="logoAbout" />
                 </div>
             </div>
         </div>

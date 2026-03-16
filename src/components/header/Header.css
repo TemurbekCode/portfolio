@@ -214,3 +214,59 @@
         transform: rotateY(360deg);
     }
 }
+
+@media (max-width: 768px) {
+
+    .headerContent {
+        flex-direction: column;
+        text-align: center;
+        margin: -50px 0;
+        height: 130vh;
+    }
+
+    .leftHead {
+        width: 100%;
+         margin: 40px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .h3-head {
+        font-size: 1rem;
+    }
+
+    .head-h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-btn {
+        width: 110px;
+        font-size: 0.9rem;
+    }
+
+    .header-bt {
+        width: 100px;
+        font-size: 0.9rem;
+    }
+
+    .headCard {
+        margin: 10px 5px;
+        width: 150px;
+        height: 130px;
+    }
+
+    .rightHead {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .text-img {
+        width: 250px;
+        height: 250px;
+        margin: -100px auto;
+    }
+
+}
