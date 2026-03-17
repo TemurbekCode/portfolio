@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.projectContainer {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    object-fit: cover;
+    filter: brightness(90%);
+    background: url(/project.jpg) no-repeat center center;
+}

@@ -25,7 +25,7 @@ function Navbar() {
                     <Link to="/about" className="nav-link" onClick={closeAll}>
                         {t("about")}
                     </Link>
-                    <Link to="/" className="nav-link" onClick={closeAll}>
+                    <Link to="/projects" className="nav-link" onClick={closeAll}>
                         {t("projects")}
                     </Link>
                     <Link to="/" className="nav-link" onClick={closeAll}>
