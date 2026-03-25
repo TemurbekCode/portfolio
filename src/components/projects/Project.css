@@ -10,7 +10,10 @@
     position: relative;
     overflow: hidden;
     background-color: black;
-    object-fit: cover;
     filter: brightness(90%);
-    background: url(/project.jpg) no-repeat center center;
+    /*background: url(/projectes.avif) no-repeat center center;
+    background-size: cover;*/
+    background: radial-gradient(circle at 20% 30%, #5f2cff, transparent 25%),
+        radial-gradient(circle at 80% 70%, #00d4ff, transparent 25%),
+        #0a0a0a;
 }
