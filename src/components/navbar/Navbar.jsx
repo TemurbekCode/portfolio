@@ -34,11 +34,11 @@ function Navbar() {
                     <Link to="/" className="nav-link" onClick={closeAll}>
                         {t("services")}
                     </Link>
-                </div>
 
-                <div className="nav-right">
-                    <button onClick={() => i18n.changeLanguage("en")}>EN</button>
-                    <button onClick={() => i18n.changeLanguage("uz")}>UZ</button>
+                    <div className="nav-right nav-right-mobile">
+                        <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+                        <button onClick={() => i18n.changeLanguage("uz")}>UZ</button>
+                    </div>
                 </div>
 
                 <div className="burger" onClick={() => setMenuOpen(!menuOpen)}>

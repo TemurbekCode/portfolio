@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { color } from "three/src/nodes/tsl/TSLCore.js";
 
 const Header = () => {
     useEffect(() => {
@@ -83,7 +84,7 @@ const Header = () => {
 
                     <div className="cards-head">
                         <div className="headCard">
-                            <h1>6 +</h1>
+                            <h1>3 +</h1>
                             <h2>Projects</h2>
                         </div>
                         <div className="headCard">

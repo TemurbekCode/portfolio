@@ -123,3 +123,79 @@
     border-radius: 10px;
     box-shadow: 7px 7px 15px #0000ff95, -7px -7px 15px #0000ff95;
 }
+
+@media (max-width: 768px) {
+    .aboutContainer {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .h1-about {
+        font-size: 2.5rem;
+        padding: 10px 20px;
+        justify-content: center;
+    }
+
+    .about-h2 {
+        width: 90%;
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+
+    .leftAbout {
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-about1,
+    .card-about {
+        width: 90%;
+        margin: 20px 0;
+        height: auto;
+        padding: 20px;
+    }
+
+    .b-cardAbout {
+        font-size: 1.5rem;
+        width: 70px;
+        height: 35px;
+        margin: 5px auto;
+    }
+
+    .p-cardAbout,
+    .p-scndAbout {
+        font-size: 1rem;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .front,
+    .tool {
+        width: 90%;
+        margin: 10px auto;
+        justify-content: center;
+    }
+
+    .logoAbout {
+        width: 70%;
+        position: relative;
+        top: 20px;
+        right: 0;
+        margin: 20px auto;
+        box-shadow: 5px 5px 10px #0000ff95, -5px -5px 10px #0000ff95;
+    }
+
+    .rightAbout {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
