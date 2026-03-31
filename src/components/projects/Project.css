@@ -6,11 +6,11 @@
 
 .projectContainer {
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
     padding: 80px 120px;
     background: radial-gradient(circle at 20% 30%, #5f2cff, transparent 25%),
-                radial-gradient(circle at 80% 70%, #00d4ff, transparent 25%),
-                #0a0a0a;
+        radial-gradient(circle at 80% 70%, #00d4ff, transparent 25%),
+        #0a0a0a;
 }
 
 .h1-project {
@@ -30,12 +30,12 @@
     border-radius: 20px;
     overflow: hidden;
     transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 .imgSchool {
@@ -162,4 +162,41 @@
     .btn-project {
         width: 100%;
     }
+}
+
+.check {
+    color: #00d4ff;
+    font-size: 2.5rem;
+}
+
+.smallsCont {
+    display: flex;
+    flex-direction: column;
+    background: #00d4ff;
+    border-radius: 20px;
+    margin: 50px 50px;
+    justify-content: center;
+    padding: 0 50px;
+    width: 90%;
+}
+
+.links-summ {
+    background: #00000024;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #e5e7eb;
+    border-radius: 5px;
+    margin: 20px 0;
+    width: 60%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.links-summ:hover {
+    transform: translateX(15px);
+    background-color: #000000;
 }

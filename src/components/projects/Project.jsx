@@ -1,3 +1,4 @@
+import { color } from "three/src/nodes/tsl/TSLCore.js";
 import "./Project.css"
 
 
@@ -105,6 +106,16 @@ function Project() {
                     </div>
                 </div>
             </div>
+
+            <details className="smallsCont">
+                <summary className="check">
+                    <mark>Small Projects</mark>
+                </summary>
+                <a className="links-summ" href="https://expanding-card-animation.netlify.app/">Images Animation</a>
+                <a className="links-summ" href="https://todo-small-temur.netlify.app/">To Do App</a>
+                <a className="links-summ" href="https://todo-unn-temur.netlify.app/">Small To Do App</a>
+                <a className="links-summ" href="https://message-animation.netlify.app/">Check Button Message Animation</a>
+            </details>
         </div>
     )
 }
