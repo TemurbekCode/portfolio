@@ -78,7 +78,9 @@ const Header = () => {
                     <h1 className="head-h1" data-aos="zoom-in">Frontend Developer</h1><br />
                     <h3 className="h3-head">I'm a junior frontend developer with limited experience, currently improving my skills and learning backend to become a fullstack web developer.</h3>
                     <div className="btns-head">
-                        <button className="header-btn">View Projects</button>
+                        <a href="/projects">
+                            <button className="header-btn">View Projects</button>
+                        </a>
                         <button className="header-bt">Contact</button>
                     </div>
 

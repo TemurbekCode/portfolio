@@ -28,11 +28,8 @@ function Navbar() {
                     <Link to="/projects" className="nav-link" onClick={closeAll}>
                         {t("projects")}
                     </Link>
-                    <Link to="/" className="nav-link" onClick={closeAll}>
+                    <Link to="/skills" className="nav-link" onClick={closeAll}>
                         {t("skill")}
-                    </Link>
-                    <Link to="/" className="nav-link" onClick={closeAll}>
-                        {t("services")}
                     </Link>
 
                     <div className="nav-right nav-right-mobile">

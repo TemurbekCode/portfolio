@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.skillsContainer {
+    width: 100%;
+    height: 120vh;
+    background: radial-gradient(circle at 20% 30%, red, transparent 25%),
+        radial-gradient(circle at 80% 70%, #ffffff, transparent 25%),
+        #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-skills {
+    color: #7dd3fc;
+    font-size: 3.5rem;
+}
+
+.skillsCard {
+    border: solid 2px #fff;
+    width: 80%;
+    height: 60vh;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.059);
+    backdrop-filter: blur(100px);
+}
+
+.skillsCard2 {
+    border: solid 2px #fff;
+    width: 80%;
+    height: 40vh;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.059);
+    backdrop-filter: blur(100px);
+    margin-top: 30px;
+}

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import About from './components/about/About.jsx';
 import Project from './components/projects/Project.jsx';
+import Skills from './components/skills/Skills.jsx';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Project />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="*" element={<h2>404 - Page Not Found</h2>} />
       </Routes>
     </>
