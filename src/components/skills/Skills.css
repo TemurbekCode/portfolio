@@ -6,7 +6,7 @@
 
 .skillsContainer {
     width: 100%;
-    height: 120vh;
+    height: 80vh;
     background: radial-gradient(circle at 20% 30%, red, transparent 25%),
         radial-gradient(circle at 80% 70%, #ffffff, transparent 25%),
         #0a0a0a;
@@ -19,23 +19,118 @@
 .h1-skills {
     color: #7dd3fc;
     font-size: 3.5rem;
+    margin-bottom: 20px;
 }
 
 .skillsCard {
     border: solid 2px #fff;
     width: 80%;
-    height: 60vh;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 40px;
     background: rgba(255, 255, 255, 0.059);
     backdrop-filter: blur(100px);
+    padding: 20px;
+    transition: 0.7s ease;
+    transform: rotateZ(10deg);
 }
 
-.skillsCard2 {
-    border: solid 2px #fff;
-    width: 80%;
-    height: 40vh;
-    border-radius: 10px;
+.skillsCard:hover {
+    transform: rotateZ(0deg);
+    box-shadow: -30px -20px 10px rgba(255, 255, 255, 0.995);
+}
+
+.cont-topic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background: rgba(255, 255, 255, 0.059);
-    backdrop-filter: blur(100px);
-    margin-top: 30px;
+    width: 40%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.cont-topic:hover {
+    transform: translateX(50px);
+    background-color: rgba(255, 255, 255, 0.137);
+}
+
+.p-cont {
+    color: #919191;
+}
+
+/* Skill bar */
+.skill {
+    margin: 15px 0;
+    color: #fff;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #111827;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #38bdf8;
+    border-radius: 50px;
+    width: 0;
+    animation: load 2s forwards;
+}
+
+/* Percent widths */
+.html {
+    width: 95%;
+}
+
+.js {
+    width: 88%;
+}
+
+.react {
+    width: 98%;
+}
+
+.bootstrap {
+    width: 20%;
+}
+
+.git {
+    width: 85%;
+}
+
+@keyframes load {
+    from {
+        width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .skillsCard {
+        width: 90%;
+        box-shadow: 20px 10px 5px rgba(255, 255, 255, 0.995);
+    }
+
+    .h1-cont {
+        font-size: 2rem;
+    }
+
+    .cont-topic {
+        width: 100%;
+    }
+
+    .p-cont {
+        font-size: 0.9rem;
+    }
 }

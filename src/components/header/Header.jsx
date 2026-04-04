@@ -81,7 +81,9 @@ const Header = () => {
                         <a href="/projects">
                             <button className="header-btn">View Projects</button>
                         </a>
-                        <button className="header-bt">Contact</button>
+                        <a href="/register">
+                            <button className="header-bt">Contact</button>
+                        </a>
                     </div>
 
                     <div className="cards-head">

@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage.jsx";
 import About from './components/about/About.jsx';
 import Project from './components/projects/Project.jsx';
 import Skills from './components/skills/Skills.jsx';
+import Register from './components/register/Register.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<h2>404 - Page Not Found</h2>} />
       </Routes>
     </>

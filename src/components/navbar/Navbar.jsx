@@ -31,6 +31,9 @@ function Navbar() {
                     <Link to="/skills" className="nav-link" onClick={closeAll}>
                         {t("skill")}
                     </Link>
+                    <Link to="/register" className="nav-link" onClick={closeAll}>
+                        {t("Contact")}
+                    </Link>
 
                     <div className="nav-right nav-right-mobile">
                         <button onClick={() => i18n.changeLanguage("en")}>EN</button>
