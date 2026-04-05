@@ -50,16 +50,16 @@ function Register() {
                         <div className="socials">
                             <h2>My Socials:</h2>
                             <a className="a-soc" href="https://t.me/ysnvch" target="_blank" rel="noopener noreferrer">
-                                <div className="a-soci">TG</div>
+                                <div className="a-soci"></div>
                             </a>
                             <a className="a-soc" href="https://instagram.com/yshnvic" target="_blank" rel="noopener noreferrer">
-                                <div className="a-soci">IG</div>
+                                <div className="a-soci2"></div>
                             </a>
                             <a className="a-soc" href="https://tiktok.com/@yshnvic" target="_blank" rel="noopener noreferrer">
-                                <div className="a-soci">TT</div>
+                                <div className="a-soci3"></div>
                             </a>
                             <a className="a-soc" href="https://github.com/TemurbekCode" target="_blank" rel="noopener noreferrer">
-                                <div className="a-soci">GH</div>
+                                <div className="a-soci4"></div>
                             </a>
                         </div>
                     </div>

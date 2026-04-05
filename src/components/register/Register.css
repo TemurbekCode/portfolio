@@ -85,6 +85,7 @@
 }
 
 .a-soci {
+    background: url(/telegram-logo.jpg) center/cover no-repeat;
     border-radius: 10px;
     color: white;
     display: flex;
@@ -93,15 +94,58 @@
     justify-content: center;
     width: 50px;
     height: 5vh;
-    background-color: #0a0a0a78;
     border: solid 1px #000;
     transition: 0.3s ease-in-out;
 }
 
-.a-soci:hover {
+.a-soci2 {
+    background: url(/instagramlogo.jpg) center/cover no-repeat;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 5vh;
+    border: solid 1px #000;
+    transition: 0.3s ease-in-out;
+}
+
+.a-soci3 {
+    background: url(/tiktokmlogo.jpg) center/cover no-repeat;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 5vh;
+    border: solid 1px #000;
+    transition: 0.3s ease-in-out;
+}
+
+.a-soci4 {
+    background: url(/githublogo.webp) center/cover no-repeat;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 5vh;
+    border: solid 1px #000;
+    transition: 0.3s ease-in-out;
+}
+
+.a-soci:hover,
+.a-soci2:hover,
+.a-soci3:hover,
+.a-soci4:hover {
     transform: scale(1.4);
     border: solid 1px #ffffff9f;
-    background-color: #0a0a0a;
 }
 
 /* 📱 MOBILE */

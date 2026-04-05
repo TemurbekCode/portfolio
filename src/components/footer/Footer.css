@@ -20,6 +20,8 @@
 .footer-logo {
   width: 120px;
   margin-bottom: 15px;
+  border-radius: 25px;
+  border: solid 2px orange;
 }
 
 .developer {
@@ -33,37 +35,6 @@
   gap: 15px;
 }
 
-.footer-contact {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-}
-
-.footer-socials {
-  margin-top: 15px;
-  display: flex;
-  gap: 10px;
-}
-
-.social-btn {
-  width: 35px;
-  height: 35px;
-  background: #1e3a8a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  font-size: 0.8rem;
-  transition: 0.3s ease;
-}
-
-.social-btn:hover {
-  transform: translateY(-3px);
-  background: #2563eb;
-}
 
 /* 📱 MOBILE */
 @media (max-width: 768px) {

@@ -1,8 +1,6 @@
 import "./Footer.css";
-import { Github, Instagram, Send, Phone, Mail, MapPin } from "lucide-react";
 
 function Footer() {
-    const { t } = useTranslation();
 
     return (
         <footer className="footer">
@@ -17,28 +15,24 @@ function Footer() {
                 </div>
 
                 <div className="footer-right">
-                    <div className="footer-contact">
-                        <Phone size={20} />
-                        <span>+998 93 703 11 21</span>
-                    </div>
-
-                    <div className="footer-contact">
-                        <Mail size={20} />
-                        <span>temurbeka82@gmail.com</span>
-                    </div>
-
-                    <div className="footer-contact">
-                        <MapPin size={20} />
-                        <span>Urgut, Samarkand</span>
-                    </div>
-
-                    <div className="footer-socials">
-                        <Github size={18} />
-                        <Instagram size={18} />
-                        <Send size={18} />
+                    <h1>Contact Me</h1>
+                    <p><Email:p>temurbeka82@gmail.com</Email:p></p>
+                    <p><Phone:p>+998 93 703 11 21</Phone:p></p>
+                    <div className="socials">
+                        <a className="a-soc" href="https://t.me/ysnvch" target="_blank" rel="noopener noreferrer">
+                            <div className="a-soci"></div>
+                        </a>
+                        <a className="a-soc" href="https://instagram.com/yshnvic" target="_blank" rel="noopener noreferrer">
+                            <div className="a-soci2"></div>
+                        </a>
+                        <a className="a-soc" href="https://tiktok.com/@yshnvic" target="_blank" rel="noopener noreferrer">
+                            <div className="a-soci3"></div>
+                        </a>
+                        <a className="a-soc" href="https://github.com/TemurbekCode" target="_blank" rel="noopener noreferrer">
+                            <div className="a-soci4"></div>
+                        </a>
                     </div>
                 </div>
-
             </div>
         </footer>
     );
