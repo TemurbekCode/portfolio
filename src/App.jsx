@@ -8,6 +8,7 @@ import About from './components/about/About.jsx';
 import Project from './components/projects/Project.jsx';
 import Skills from './components/skills/Skills.jsx';
 import Register from './components/register/Register.jsx';
+import Footer from './components/footer/Footer.jsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<h2>404 - Page Not Found</h2>} />
       </Routes>
+      <Footer />
     </>
   )
 }
