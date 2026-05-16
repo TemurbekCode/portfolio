@@ -21,11 +21,11 @@ const projects = [
     },
     {
         num: "03",
-        title: "Font Fake",
-        desc: "Made for the mid-term of FrontEnd development course",
-        img: "fontSite.png",
+        title: "Rustam's Portfolio",
+        desc: "The Portfolio WebSite that made for the hight school student",
+        img: "rustam.jpg",
         tools: ["React js", "JavaScript", "HTML", "CSS"],
-        live: "https://fonte-fake-temur.netlify.app/",
+        live: "https://teacher-rustam.netlify.app/",
         github: "https://github.com/TemurbekCode",
     },
     {
