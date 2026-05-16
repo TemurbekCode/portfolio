@@ -45,7 +45,7 @@ function Register() {
               <span className="contact-icon">✉</span>
               <div>
                 <p className="contact-label">Email</p>
-                <p className="contact-value">temurbeka82@gmail.com</p>
+                <p className="contact-value">temurbekalisherov82@gmail.com</p>
               </div>
             </div>
 
