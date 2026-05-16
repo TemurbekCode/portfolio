@@ -108,7 +108,7 @@ function Register() {
               </div>
               <div className="field">
                 <label>Telegram / Instagram</label>
-                <input type="tel" name="from_phone" placeholder="@username" required />
+                <input type="text" name="from_phone" placeholder="@username" required />
               </div>
             </div>
 
