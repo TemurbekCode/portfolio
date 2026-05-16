@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_a8d852d";
 const TEMPLATE_ID = "template_bqk9d0f";
-const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const PUBLIC_KEY = "jUy_y9jB4kOIDYW3O";
 
 function Register() {
     const { t } = useTranslation();

@@ -97,11 +97,11 @@ const Header = () => {
 
           <div className="cards-head">
             <div className="headCard">
-              <h1>3 +</h1>
+              <h1>6 +</h1>
               <h2>Projects</h2>
             </div>
             <div className="headCard">
-              <h1>1 +</h1>
+              <h1>10 +</h1>
               <h2>Achievements</h2>
             </div>
           </div>

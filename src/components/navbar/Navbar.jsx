@@ -7,42 +7,42 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
     const { t, i18n } = useTranslation();
 
-    const closeAll = () => {
-        setMenuOpen(false);
-    }
+    const closeAll = () => setMenuOpen(false);
 
     return (
         <div className="nav">
             <div className="navContainer">
-                <Link to="/" onClick={closeAll}>
-                    <h1 className="logo">&lt; TA /&gt;</h1>
+
+                <Link to="/" onClick={closeAll} className="logo-link">
+                    <div className="logo">
+                        <span className="logo-t">T</span>
+                        <span className="logo-a">A</span>
+                        <span className="logo-cursor"></span>
+                    </div>
                 </Link>
 
                 <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-                    <Link to="/" className="nav-link" onClick={closeAll}>
-                        {t("home")}
-                    </Link>
-                    <Link to="/about" className="nav-link" onClick={closeAll}>
-                        {t("about")}
-                    </Link>
-                    <Link to="/projects" className="nav-link" onClick={closeAll}>
-                        {t("projects")}
-                    </Link>
-                    <Link to="/skills" className="nav-link" onClick={closeAll}>
-                        {t("skill")}
-                    </Link>
-                    <Link to="/register" className="nav-link" onClick={closeAll}>
-                        {t("Contact")}
-                    </Link>
+                    <Link to="/" className="nav-link" onClick={closeAll}>{t("home")}</Link>
+                    <Link to="/about" className="nav-link" onClick={closeAll}>{t("about")}</Link>
+                    <Link to="/projects" className="nav-link" onClick={closeAll}>{t("projects")}</Link>
+                    <Link to="/skills" className="nav-link" onClick={closeAll}>{t("skill")}</Link>
+                    <Link to="/register" className="nav-link" onClick={closeAll}>{t("Contact")}</Link>
 
-                    <div className="nav-right nav-right-mobile">
+                    <div className="nav-lang nav-lang-mobile">
                         <button onClick={() => i18n.changeLanguage("en")}>EN</button>
                         <button onClick={() => i18n.changeLanguage("uz")}>UZ</button>
                     </div>
                 </div>
 
+                <div className="nav-lang nav-lang-desktop">
+                    <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+                    <button onClick={() => i18n.changeLanguage("uz")}>UZ</button>
+                </div>
+
                 <div className="burger" onClick={() => setMenuOpen(!menuOpen)}>
-                    ☰
+                    <span className={`burger-line ${menuOpen ? "open" : ""}`}></span>
+                    <span className={`burger-line ${menuOpen ? "open" : ""}`}></span>
+                    <span className={`burger-line ${menuOpen ? "open" : ""}`}></span>
                 </div>
             </div>
         </div>
