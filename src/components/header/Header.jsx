@@ -3,13 +3,11 @@ import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom"; // React Router import
+import { Link } from "react-router-dom";
 
 const Header = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 500,
-    });
+    AOS.init({ duration: 500 });
   }, []);
 
   const canvasRef = useRef(null);
@@ -30,7 +28,6 @@ const Header = () => {
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
-    // stars
     const stars = [];
     for (let i = 0; i < 500; i++) {
       const geometry = new THREE.SphereGeometry(0.1, 8, 8);
@@ -73,6 +70,7 @@ const Header = () => {
     <div className="headerContainer">
       <canvas ref={canvasRef} className="headerCanvas" />
       <div className="headerContent">
+        {/* Left Side */}
         <div className="leftHead">
           <h1 className="head-h1" data-aos="fade-up">
             Hi, I'm Temur
@@ -94,7 +92,6 @@ const Header = () => {
               <button className="header-bt">Contact</button>
             </Link>
           </div>
-
           <div className="cards-head">
             <div className="headCard">
               <h1>6 +</h1>
@@ -107,16 +104,9 @@ const Header = () => {
           </div>
         </div>
 
+        {/* Right Side */}
         <div className="rightHead">
-          <div className="laptop">
-            <div className="red"></div>
-            <div className="yellow"></div>
-            <div className="green"></div>
-
-            <div className="laptopText">
-              <img src="/me.jpg" className="text-img" />
-            </div>
-          </div>
+          <img src="/me.jpg" className="text-img" alt="Temur" />
         </div>
       </div>
     </div>
