@@ -3,7 +3,7 @@ import "./Project.css"
 const projects = [
     {
         num: "01",
-        title: "School WebSite",
+        title: "103-School Urgut",
         desc: "Made for 103-Public School in Samarkand Urgut",
         img: "schoolSite.png",
         tools: ["React js", "JavaScript", "HTML", "CSS"],
@@ -12,11 +12,11 @@ const projects = [
     },
     {
         num: "02",
-        title: "Pero Travel",
-        desc: "Copy site made for the final exam of FrontEnd development course",
-        img: "travelSite.png",
+        title: "EIL- Export Import Logistics",
+        desc: "Logistics company website - corparative webpage",
+        img: "eil.jpg",
         tools: ["React js", "JavaScript", "HTML", "CSS"],
-        live: "https://perotravel-my-portfolio-temur.netlify.app/",
+        live: "https://eilogistika.netlify.app/",
         github: "https://github.com/TemurbekCode",
     },
     {
@@ -30,7 +30,7 @@ const projects = [
     },
     {
         num: "04",
-        title: "Portfolio Site",
+        title: "Temur's Portfolio",
         desc: "Made to describe myself without a job or university interview",
         img: "portfolioSite.png",
         tools: ["React js", "JavaScript", "HTML", "CSS"],
@@ -39,7 +39,7 @@ const projects = [
     },
     {
         num: "05",
-        title: "Restaurant Site",
+        title: "Foodly Restaurant",
         desc: "Foodly — a restaurant landing page with menu and booking",
         img: "restaurant.jpg",
         tools: ["React js", "JavaScript", "HTML", "CSS"],
@@ -48,7 +48,7 @@ const projects = [
     },
     {
         num: "06",
-        title: "Web Company Site",
+        title: "Web Rivo - Web Company",
         desc: "Webrivo — agency site built for practice",
         img: "webrivo.jpg",
         tools: ["React js", "JavaScript", "HTML", "CSS"],
@@ -62,7 +62,7 @@ const smallProjects = [
     { label: "To Do App", href: "https://todo-small-temur.netlify.app/" },
     { label: "Small To Do App", href: "https://todo-unn-temur.netlify.app/" },
     { label: "Check Button Message Animation", href: "https://message-animation.netlify.app/" },
-    { label: "Business Web Card", href: "https://temur-business-card.netlify.app/" },
+    { label: "Business Web Card", href: "https://temur-card.netlify.app/" },
 ]
 
 function ProjectCard({ num, title, desc, img, tools, live, github }) {
