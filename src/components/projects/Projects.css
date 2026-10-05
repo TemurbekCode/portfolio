@@ -1,0 +1,29 @@
+.projects__list { display: grid; gap: clamp(64px, 9vw, 112px); }
+.project { display: grid; grid-template-columns: 1.25fr 1fr; align-items: center; gap: clamp(28px, 5vw, 64px); }
+.project--reversed { grid-template-columns: 1fr 1.25fr; }
+.project--reversed .project__gallery { order: 2; }
+
+.project__gallery { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 12px; }
+.project__shot { position: relative; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-alt); aspect-ratio: 16 / 10; }
+.project__shot--main { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.project__shot img, .project__shot .media-placeholder { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.project__shot:hover img, .project__shot:hover .media-placeholder { transform: scale(1.03); }
+.project__shot-overlay { position: absolute; inset: 0; display: grid; place-items: center; color: #fff; background: rgba(15, 18, 20, 0.45); opacity: 0; transition: opacity 0.3s; }
+.project__shot:hover .project__shot-overlay, .project__shot:focus-visible .project__shot-overlay { opacity: 1; }
+
+.project__number { display: block; font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 8px; }
+.project__name { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; }
+.project__category { margin-top: 6px; font-weight: 600; color: var(--muted); }
+.project__description { margin: 18px 0 20px; color: var(--muted); max-width: 52ch; }
+.project__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.projects__more { display: flex; justify-content: center; margin-top: clamp(56px, 8vw, 96px); }
+
+@media (max-width: 960px) {
+  .project, .project--reversed { grid-template-columns: 1fr; }
+  .project--reversed .project__gallery { order: 0; }
+}
+@media (max-width: 560px) {
+  .project__gallery { grid-template-columns: 1fr; }
+  .project__shot--main, .project__shot { aspect-ratio: 16 / 10; }
+  .project__actions .btn { flex: 1 1 100%; }
+}
