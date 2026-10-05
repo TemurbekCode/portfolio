@@ -1,25 +1,18 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { navItems } from '../../data/navigation'
-import { profile } from '../../data/socials'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import './Navbar.css'
 
 const sectionIds = navItems.map((item) => item.id)
 
+// Full-width tab bar. Sits right under the masthead and sticks to the top
+// of the screen while scrolling. On mobile it collapses into a menu.
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const active = useActiveSection(sectionIds)
+  const current = navItems.find((item) => item.id === active)
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  // Mobile menu: Escape closes, body scroll locks while open.
   useEffect(() => {
     if (!open) return undefined
     const onKey = (e) => e.key === 'Escape' && setOpen(false)
@@ -31,60 +24,35 @@ export default function Navbar() {
     }
   }, [open])
 
-  // Leaving the mobile breakpoint should never leave the menu stuck open.
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 861px)')
+    const mq = window.matchMedia('(min-width: 761px)')
     const onChange = (e) => e.matches && setOpen(false)
     mq.addEventListener('change', onChange)
     return () => mq.removeEventListener('change', onChange)
   }, [])
 
   return (
-    <header className={`navbar ${scrolled ? 'is-scrolled' : ''} ${open ? 'is-open' : ''}`}>
-      <div className="container navbar__inner">
-        <a href="#top" className="navbar__brand" onClick={() => setOpen(false)}>
-          <span className="navbar__mark" aria-hidden="true">TA</span>
-          <span className="navbar__name">{profile.name}</span>
-        </a>
-
-        <nav className="navbar__nav" aria-label="Main navigation">
-          <ul className="navbar__list">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <a
-                  href={`#${item.id}`}
-                  className={`navbar__link ${active === item.id ? 'is-active' : ''}`}
-                  aria-current={active === item.id ? 'true' : undefined}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
+    <header className={`tabs ${open ? 'is-open' : ''}`}>
+      <nav className="tabs__bar" aria-label="Main navigation">
         <button
           type="button"
-          className="icon-btn navbar__toggle"
+          className="tabs__toggle"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-controls="tab-list"
         >
-          {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+          <span>{current ? current.label : 'Menu'}</span>
+          {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
         </button>
-      </div>
 
-      <div className="navbar__overlay" onClick={() => setOpen(false)} aria-hidden="true" />
-      <nav id="mobile-menu" className="navbar__mobile" aria-label="Mobile navigation">
-        <ul>
-          {navItems.map((item, i) => (
-            <li key={item.id} style={{ '--i': i }}>
+        <ul id="tab-list" className="tabs__list">
+          {navItems.map((item) => (
+            <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className={active === item.id ? 'is-active' : ''}
+                className={`tabs__link ${active === item.id ? 'is-active' : ''}`}
+                aria-current={active === item.id ? 'true' : undefined}
                 onClick={() => setOpen(false)}
-                tabIndex={open ? 0 : -1}
               >
                 {item.label}
               </a>
@@ -92,6 +60,7 @@ export default function Navbar() {
           ))}
         </ul>
       </nav>
+      <div className="tabs__overlay" onClick={() => setOpen(false)} aria-hidden="true" />
     </header>
   )
 }

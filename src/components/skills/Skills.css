@@ -1,21 +1,101 @@
-.skills__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
 .skill-card {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px;
-  opacity: 0; transform: translateY(20px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
   transition: opacity 0.6s var(--ease) var(--delay), transform 0.6s var(--ease) var(--delay), box-shadow 0.25s, border-color 0.25s;
 }
-.skill-card.is-visible { opacity: 1; transform: none; }
-.skill-card.is-visible:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow-md); transition-delay: 0ms; }
 
-.skill-card__top { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 18px; }
-.skill-card__icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: var(--bg); color: var(--ink); transition: transform 0.3s var(--ease), background-color 0.3s, color 0.3s; }
-.skill-card:hover .skill-card__icon { transform: scale(1.1) rotate(-4deg); background: var(--accent-soft); color: var(--accent); }
-.skill-card__level { font-size: 0.75rem; font-weight: 700; color: var(--muted); }
-.skill-card__level--learning { padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-strong); }
-.skill-card__name { font-size: 1.125rem; font-weight: 700; margin-bottom: 14px; }
+.skill-card.is-visible {
+  opacity: 1;
+  transform: none;
+}
 
-.skill-card__bar { height: 6px; border-radius: 999px; background: var(--bg-alt); overflow: hidden; }
-.skill-card__fill { display: block; height: 100%; width: var(--value); border-radius: inherit; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 1.1s var(--ease) calc(var(--delay) + 250ms); }
-.skill-card.is-visible .skill-card__fill { transform: scaleX(1); }
-.skill-card.is-learning .skill-card__fill { background: repeating-linear-gradient(135deg, var(--accent) 0 6px, #4f9d88 6px 12px); }
-.skill-card.is-learning .skill-card__bar { background: repeating-linear-gradient(135deg, var(--bg-alt) 0 6px, #e4e1d8 6px 12px); }
+.skill-card.is-visible:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transition-delay: 0ms;
+}
+
+.skill-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.skill-card__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 0;
+  background: var(--bg);
+  color: var(--ink);
+  transition: transform 0.3s var(--ease), background-color 0.3s, color 0.3s;
+}
+
+.skill-card:hover .skill-card__icon {
+  transform: scale(1.1) rotate(-4deg);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.skill-card__level {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.skill-card__level--learning {
+  padding: 3px 10px;
+  border-radius: 0;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.skill-card__name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.skill-card__bar {
+  height: 6px;
+  border-radius: 0;
+  background: var(--bg-alt);
+  overflow: hidden;
+}
+
+.skill-card__fill {
+  display: block;
+  height: 100%;
+  width: var(--value);
+  border-radius: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.1s var(--ease) calc(var(--delay) + 250ms);
+}
+
+.skill-card.is-visible .skill-card__fill {
+  transform: scaleX(1);
+}
+
+.skill-card.is-learning .skill-card__fill {
+  background: repeating-linear-gradient(135deg, var(--accent) 0 6px, #b99445 6px 12px);
+}
+
+.skill-card.is-learning .skill-card__bar {
+  background: repeating-linear-gradient(135deg, var(--bg) 0 6px, #e2d9bf 6px 12px);
+}
