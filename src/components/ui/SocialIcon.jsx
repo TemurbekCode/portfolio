@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaTelegram, FaLinkedinIn, FaTiktok } from 'react-icons/fa6'
+import { FaGithub, FaInstagram, FaTelegram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa6'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 // Brand icons come from react-icons (lucide-react v1 has no brand logos).
@@ -7,7 +7,7 @@ const icons = {
   instagram: FaInstagram,
   telegram: FaTelegram,
   linkedin: FaLinkedinIn,
-  tiktok: FaTiktok,
+  whatsapp: FaWhatsapp,
   mail: Mail,
   phone: Phone,
   location: MapPin,

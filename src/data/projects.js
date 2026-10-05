@@ -1,7 +1,6 @@
 // image paths are relative to src/assets/. Exactly 3 per project:
 // [0] = large featured image, [1] and [2] = smaller images.
-// github / live: use null until the real URL exists — the card then shows
-// a disabled "coming soon" button instead of a fake link.
+// github / live: null = disabled "coming soon" button (no fake links).
 // TODO: check `technologies` against each repository and edit if needed.
 export const projects = [
   {
@@ -9,15 +8,15 @@ export const projects = [
     name: 'RavonPay',
     category: 'Fintech / Dashboard System',
     description:
-      'A modern fintech and payment interface with a dashboard-style layout, built around clear data presentation and responsive product design.',
+      'A modern fintech wallet concept for Central Asia: a landing page, an account sign-up flow and a dashboard with wallet, send/receive, cards, exchange rate and utility bills screens. Built as a frontend project.',
     technologies: ['React', 'JavaScript', 'SCSS', 'Vite'],
     images: [
-      { src: 'images/projects/ravonpay/1.jpg', alt: 'RavonPay main dashboard screen' },
-      { src: 'images/projects/ravonpay/2.jpg', alt: 'RavonPay secondary screen' },
-      { src: 'images/projects/ravonpay/3.jpg', alt: 'RavonPay additional screen' },
+      { src: 'images/projects/ravonpay/1.jpg', alt: 'RavonPay landing page with a wallet preview' },
+      { src: 'images/projects/ravonpay/2.jpg', alt: 'RavonPay dashboard with balance and quick actions' },
+      { src: 'images/projects/ravonpay/3.jpg', alt: 'RavonPay account type selection screen' },
     ],
-    github: null,
-    live: null,
+    github: 'https://github.com/TemurbekCode/Ravon-Pay',
+    live: 'https://ravonpay.netlify.app/',
   },
   {
     number: '02',
@@ -39,14 +38,14 @@ export const projects = [
     name: 'ChegaraMap',
     category: 'Interactive Map / Measurement Application',
     description:
-      'An interactive, map-based project for measuring land plots: draw an area on the map and see its size and perimeter.',
+      'A map-based land measurement app: search a place, mark a plot on the map and get its area (sotix or m\u00b2), perimeter and side lengths. Includes Uzbek and English interface and a standard/satellite map style.',
     technologies: ['React', 'JavaScript', 'Vite'], // add map libraries (e.g. Leaflet) only if the repo uses them
     images: [
-      { src: 'images/projects/chegaramap/1.jpg', alt: 'ChegaraMap map interface' },
-      { src: 'images/projects/chegaramap/2.jpg', alt: 'ChegaraMap measurement interface' },
-      { src: 'images/projects/chegaramap/3.jpg', alt: 'ChegaraMap result screen' },
+      { src: 'images/projects/chegaramap/1.jpg', alt: 'ChegaraMap landing page with a measured plot preview' },
+      { src: 'images/projects/chegaramap/2.jpg', alt: 'ChegaraMap map view with place search' },
+      { src: 'images/projects/chegaramap/3.jpg', alt: 'ChegaraMap settings screen' },
     ],
-    github: null,
-    live: null,
+    github: 'https://github.com/TemurbekCode/ChegaraMap',
+    live: 'https://chegaramap.netlify.app/',
   },
 ]

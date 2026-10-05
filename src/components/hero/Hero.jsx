@@ -7,7 +7,7 @@ import SocialLinks from '../ui/SocialLinks'
 import './Hero.css'
 
 // Short labels for the strip under the name (edit freely, keep them true).
-const focusAreas = ['Frontend Development', 'React & JavaScript', 'Dashboards & Landing Pages', 'Learning Python & FastAPI']
+const focusAreas = ['Frontend Development', 'React & JavaScript', 'Dashboards & Landing Pages', 'Learning Python & Flutter']
 
 export default function Hero() {
   const cvAvailable = useCvAvailable()

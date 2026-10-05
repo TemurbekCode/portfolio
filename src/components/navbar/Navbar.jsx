@@ -1,16 +1,12 @@
-import { useEffect, useState } from 'react'
+import { forwardRef, useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { navItems } from '../../data/navigation'
-import { useActiveSection } from '../../hooks/useActiveSection'
 import './Navbar.css'
 
-const sectionIds = navItems.map((item) => item.id)
-
-// Full-width tab bar. Sits right under the masthead and sticks to the top
-// of the screen while scrolling. On mobile it collapses into a menu.
-export default function Navbar() {
+// Full-width tab bar under the masthead; sticks to the top while scrolling.
+// Each tab switches the visible page (see HomePage). On mobile it becomes a menu.
+const Navbar = forwardRef(function Navbar({ active, onNavigate }, ref) {
   const [open, setOpen] = useState(false)
-  const active = useActiveSection(sectionIds)
   const current = navItems.find((item) => item.id === active)
 
   useEffect(() => {
@@ -31,8 +27,14 @@ export default function Navbar() {
     return () => mq.removeEventListener('change', onChange)
   }, [])
 
+  const go = (event, id) => {
+    event.preventDefault()
+    setOpen(false)
+    onNavigate(id)
+  }
+
   return (
-    <header className={`tabs ${open ? 'is-open' : ''}`}>
+    <header ref={ref} className={`tabs ${open ? 'is-open' : ''}`}>
       <nav className="tabs__bar" aria-label="Main navigation">
         <button
           type="button"
@@ -51,8 +53,8 @@ export default function Navbar() {
               <a
                 href={`#${item.id}`}
                 className={`tabs__link ${active === item.id ? 'is-active' : ''}`}
-                aria-current={active === item.id ? 'true' : undefined}
-                onClick={() => setOpen(false)}
+                aria-current={active === item.id ? 'page' : undefined}
+                onClick={(e) => go(e, item.id)}
               >
                 {item.label}
               </a>
@@ -63,4 +65,6 @@ export default function Navbar() {
       <div className="tabs__overlay" onClick={() => setOpen(false)} aria-hidden="true" />
     </header>
   )
-}
+})
+
+export default Navbar

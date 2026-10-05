@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { cv } from '../data/socials'
 
-// Checks once whether the CV PDF really exists. Because Netlify's SPA
-// redirect answers 200 for unknown paths, we also check the content type.
+// Checks once whether the CV file really exists (PDF or image). Netlify's SPA
+// redirect answers 200 for unknown paths, so we also check the content type.
 export function useCvAvailable() {
   const [available, setAvailable] = useState(false)
 
@@ -11,7 +11,7 @@ export function useCvAvailable() {
     fetch(cv.url, { method: 'HEAD' })
       .then((res) => {
         const type = res.headers.get('content-type') || ''
-        if (!cancelled) setAvailable(res.ok && type.includes('pdf'))
+        if (!cancelled) setAvailable(res.ok && (type.includes('pdf') || type.startsWith('image/')))
       })
       .catch(() => {
         if (!cancelled) setAvailable(false)

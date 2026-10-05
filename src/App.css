@@ -500,3 +500,45 @@ h3.project__name,
 .skill-card__name {
     font-family: var(--serif);
 }
+
+/* ---------- Tab pages ---------- */
+.page {
+    animation: page-in 0.45s var(--ease) both;
+    min-height: 60vh;
+}
+
+@keyframes page-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.page .section {
+    padding-top: clamp(40px, 6vw, 72px);
+    border-top: 0;
+}
+
+.page .section--alt {
+    background: transparent;
+}
+
+/* Reveal offsets must never cause sideways scrolling */
+.page {
+    overflow-x: clip;
+}
+
+@media (max-width: 760px) {
+    .reveal--left {
+        transform: translateY(18px);
+    }
+
+    .reveal--right {
+        transform: translateY(18px);
+    }
+}
