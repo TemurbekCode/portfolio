@@ -5,7 +5,7 @@
 export const projects = [
   {
     number: '01',
-    name: 'RavonPay',
+    name: 'Ravon Pay',
     category: 'Fintech / Dashboard System',
     description:
       'A modern fintech wallet concept for Central Asia: a landing page, an account sign-up flow and a dashboard with wallet, send/receive, cards, exchange rate and utility bills screens. Built as a frontend project.',
@@ -20,7 +20,7 @@ export const projects = [
   },
   {
     number: '02',
-    name: 'MuzlaPay',
+    name: 'Muzla Pay',
     category: 'Payment / Escrow Platform',
     description:
       'A product concept under development for safer OLX and Telegram store purchases: the buyer\u2019s payment is held until the product is received, helping reduce trust issues between buyers and sellers.',
@@ -30,16 +30,16 @@ export const projects = [
       { src: 'images/projects/muzlapay/2.jpg', alt: 'MuzlaPay seller dashboard' },
       { src: 'images/projects/muzlapay/3.jpg', alt: 'MuzlaPay payment page' },
     ],
-    github: null,
-    live: null,
+    github: 'https://github.com/TemurbekCode/MuzlaPay',
+    live: 'https://muzlapay.netlify.app/',
   },
   {
     number: '03',
-    name: 'ChegaraMap',
+    name: 'Chegara Map',
     category: 'Interactive Map / Measurement Application',
     description:
       'A map-based land measurement app: search a place, mark a plot on the map and get its area (sotix or m\u00b2), perimeter and side lengths. Includes Uzbek and English interface and a standard/satellite map style.',
-    technologies: ['React', 'JavaScript', 'Vite'], // add map libraries (e.g. Leaflet) only if the repo uses them
+    technologies: ['React', 'JavaScript', 'Vite', 'SCSS'], // add map libraries (e.g. Leaflet) only if the repo uses them
     images: [
       { src: 'images/projects/chegaramap/1.jpg', alt: 'ChegaraMap landing page with a measured plot preview' },
       { src: 'images/projects/chegaramap/2.jpg', alt: 'ChegaraMap map view with place search' },
@@ -47,5 +47,35 @@ export const projects = [
     ],
     github: 'https://github.com/TemurbekCode/ChegaraMap',
     live: 'https://chegaramap.netlify.app/',
+  },
+  {
+    number: '04',
+    name: 'Sentinel App',
+    category: 'A real-time monitoring dashboard / Dashboard system',
+    description:
+      'Sentinel is a real-time monitoring dashboard that watches your servers, services and APIs — tracks CPU, memory, response times and errors, and warns you the moment something crosses the line. A sentinel never blinks.',
+    technologies: ['React', 'JavaScript', 'Vite'], // add
+    images: [
+      { src: 'images/projects/sentinelapp/1.png', alt: 'Sentinel App landing page with a measured plot preview' },
+      { src: 'images/projects/sentinelapp/2.png', alt: 'Sentinel App map view with place search' },
+      { src: 'images/projects/sentinelapp/3.png', alt: 'Sentinel App settings screen' },
+    ],
+    github: 'https://github.com/TemurbekCode/SentinelApp',
+    live: null,
+  },
+  {
+    number: '05',
+    name: 'Nexora App',
+    category: 'Shows how every figure is calculated. / Dashboard',
+    description:
+      'Nexora brings your orders, customers and products into one dashboard, so you can tell what is growing, what is slipping and why. Sample data is included, so you can explore right away.',
+    technologies: ['React', 'JavaScript', 'Vite'], // add
+    images: [
+      { src: 'images/projects/nexoraapp/1.png', alt: 'ChegaraMap landing page with a measured plot preview' },
+      { src: 'images/projects/nexoraapp/2.png', alt: 'ChegaraMap map view with place search' },
+      { src: 'images/projects/nexoraapp/3.png', alt: 'ChegaraMap settings screen' },
+    ],
+    github: 'https://github.com/TemurbekCode/NexoraApp',
+    live: null,
   },
 ]
